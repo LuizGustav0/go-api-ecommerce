@@ -14,7 +14,7 @@ func NewProductDB(db *sql.DB) *ProductDB {
 	return &ProductDB{db: db}
 }
 
-func (pd *CategoryDB) GetProducts() ([]*entity.Product, error) {
+func (pd *ProductDB) GetProducts() ([]*entity.Product, error) {
 	rows, err := pd.db.Query("SELECT id, name, description, price, category_id, image_url FROM products")
 	if err != nil {
 		return nil, err
@@ -35,7 +35,7 @@ func (pd *CategoryDB) GetProducts() ([]*entity.Product, error) {
 	return products, nil
 }
 
-func (pd *CategoryDB) GetProduct(id string) (*entity.Product, error) {
+func (pd *ProductDB) GetProduct(id string) (*entity.Product, error) {
 	var product entity.Product
 	err := pd.db.QueryRow("SELECT id, name, description, price, category_id, image_url FROM products WHERE id = ?", id).
 		Scan(&product.ID, &product.Name, &product.Description, &product.Price, &product.CategoryID, &product.ImageURL)
