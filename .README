@@ -1,0 +1,17 @@
+run:
+
+docker-compose up -d
+
+docker-compose exec mysql bash
+
+mysql -u root -p ecommerce;
+run -> db.sql
+
+SHOW TABLES;
+
+
+cd cmd/catalog
+go run main.go
+
+install REST Client extension vs code
+send request with -> test.http
