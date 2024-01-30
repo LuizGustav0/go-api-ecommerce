@@ -1,0 +1,70 @@
+POST http://localhost:8080/category HTTP/1.1
+HOST: localhost:8080
+Content-Type: application/json
+
+{
+    "name": "Smartphones",
+    "description": "Smartphones"
+}
+
+###
+
+GET http://localhost:8080/category/78a709d8-e32a-4192-bca9-2126a3fd973d HTTP/1.1
+HOST: localhost:8080
+Content-Type: application/json
+
+
+###
+
+GET http://localhost:8080/category HTTP/1.1
+HOST: localhost:8080
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/product HTTP/1.1
+HOST: localhost:8080
+Content-Type: application/json
+
+{
+    "name": "IPHONE 13",
+    "description": "Smartphone apple",
+    "category_id": "78a709d8-e32a-4192-bca9-2126a3fd973d",
+    "image_url": "www.google.com",
+    "price": 1300
+}
+
+###
+
+POST http://localhost:8080/product HTTP/1.1
+HOST: localhost:8080
+Content-Type: application/json
+
+{
+    "name": "S24 SAMSUNG",
+    "description": "Smartphone 8gb",
+    "category_id": "78a709d8-e32a-4192-bca9-2126a3fd973d",
+    "image_url": "www.google.com",
+    "price": 1000
+}
+
+
+###
+
+GET http://localhost:8080/product HTTP/1.1
+HOST: localhost:8080
+Content-Type: application/json
+
+
+###
+
+GET http://localhost:8080/product/c87c408a-1c3f-40fc-be83-4ebb7f8199c7 HTTP/1.1
+HOST: localhost:8080
+Content-Type: application/json
+
+
+###
+
+GET http://localhost:8080/product/category/78a709d8-e32a-4192-bca9-2126a3fd973d HTTP/1.1
+HOST: localhost:8080
+Content-Type: application/json
