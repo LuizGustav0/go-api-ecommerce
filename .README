@@ -2,12 +2,11 @@ run:
 
 docker-compose up -d
 
-docker-compose exec mysql bash
 
-mysql -u root -p ecommerce;
-run -> db.sql
+// acessar banco 
+docker exec -it mysql mysql -u root -p
 
-SHOW TABLES;
+
 
 
 cd cmd/catalog
